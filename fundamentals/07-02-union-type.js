@@ -1,0 +1,2 @@
+var courseIdNew;
+courseIdNew.toString();
