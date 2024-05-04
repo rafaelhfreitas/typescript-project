@@ -44,11 +44,36 @@ function printCourse(title: string, subtitle: string , lessonsCount: number) {
 
 // primitive type:  object
 
-const course = {
+const course02 = {
     title: "Typescript Bootcamp",
     subtitle: "Learn the language fundamentals, build pratical projects",
     lessonsCount: 10,
-    
+    author: {
+        firstName: "Rafael",
+        lastName: "Freitas"
+    }
 }
+
+
+// inline declaration but just for understood what happen underhood in typescript compilation
+// the type script can infere the type to assing the type
+const courseImplicitSyntax : {
+    title: string,
+    subtitle: string,
+    lessonsCount: number,
+    author: {
+        firstName: string,
+        lastName: string
+    }
+} = {
+    title: "Typescript Bootcamp",
+    subtitle: "Learn the language fundamentals, build pratical projects",
+    lessonsCount: 10,
+    author: {
+        firstName: "Rafael",
+        lastName: "Freitas"
+    }
+}
+
 
 console.log("The type of course is " + typeof course);

@@ -26,5 +26,20 @@ var course = {
     title: "Typescript Bootcamp",
     subtitle: "Learn the language fundamentals, build pratical projects",
     lessonsCount: 10,
+    author: {
+        firstName: "Rafael",
+        lastName: "Freitas"
+    }
+};
+// inline declaration but just for understood what happen underhood in typescript compilation
+// the type script can infere the type to assing the type
+var courseImplicitSyntax = {
+    title: "Typescript Bootcamp",
+    subtitle: "Learn the language fundamentals, build pratical projects",
+    lessonsCount: 10,
+    author: {
+        firstName: "Rafael",
+        lastName: "Freitas"
+    }
 };
 console.log("The type of course is " + typeof course);
