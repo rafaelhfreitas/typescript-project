@@ -47,7 +47,8 @@ function printCourse(title: string, subtitle: string , lessonsCount: number) {
 const course = {
     title: "Typescript Bootcamp",
     subtitle: "Learn the language fundamentals, build pratical projects",
-    lessonsCount: 10
+    lessonsCount: 10,
+    
 }
 
 console.log("The type of course is " + typeof course);
