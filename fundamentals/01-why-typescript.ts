@@ -1,7 +1,14 @@
 const courseName = "Typescript Bootcamp";
 
-printCouserName(courseName);
 
+
+if (courseName) {
+
+    let subtitle = "Learning java script";
+
+    printCouserName(courseName);
+
+}
 
 function printCouserName(name: string) {
     console.log("The course name is " + name.toUpperCase());
