@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "rootDir": "src",
+        "outDir": "dist",
+        "module": "CommonJS",
+        "lib": [
+            "ES5",
+            "DOM"
+        ]
+    },
+    "files": [
+        "src/30-tsconfig-lib.ts"
+    ]
+}
+
+// {
+//     "compilerOptions": {
+//         "target": "ES5"
+//     },
+//     "include": [
+//         "src/**/*"
+//     ],
+//     "exclude": [
+//         "src/**/02*"
+//     ]
+// }

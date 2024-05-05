@@ -10,6 +10,6 @@ interface HasTitle {
 type Course = HasId & HasTitle;
 
 
-const course: Course = {
-
-}
+// const course: Course = {
+    
+// }
