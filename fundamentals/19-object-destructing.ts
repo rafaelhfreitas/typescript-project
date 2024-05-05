@@ -17,7 +17,7 @@ printCourse(course);
 
 function printCourse(course: Course) {
 
-    const {title, subtitle, lessonsCount} =  course
+    const {title, ...rest} =  course
 
-    console.log(`Title: ${title}, Subtitle: ${subtitle}, lessonsCount: ${lessonsCount}`)
+    console.log(`Title: ${title}, Subtitle: ${rest.subtitle}, lessonsCount: ${rest.lessonsCount}`)
 }
