@@ -1,31 +1,31 @@
-// interface Course {
-//     title: string;
-//     subtitle: string;
-//     lessonsCount: number;
+interface Course {
+    title: string;
+    subtitle: string;
+    lessonsCount: number;
 
-// }
+}
 
-// type CreateCourse = (title: string, subtitle: string, lessonsCount: number) => Course;
+type CreateCourse = (title: string, subtitle: string, lessonsCount: number) => Course;
 
 
-// type OnCourseCreated = (course: Course) => void;
+type OnCourseCreated = (course: Course) => void;
 
-// const createCourse = (
-//     title: string, 
-//     subtitle: string, 
-//     lessonsCount: number,
-//     callback: OnCourseCreated
-// ) => {
-//     console.log(`Creating course with title: ${title}, 
-//         Subtitle: ${subtitle}, lessons count: ${lessonsCount}`);
+const createCourse = (
+    title: string, 
+    subtitle: string, 
+    lessonsCount: number,
+    callback: OnCourseCreated
+) => {
+    console.log(`Creating course with title: ${title}, 
+        Subtitle: ${subtitle}, lessons count: ${lessonsCount}`);
 
-//     const course = { 
-//         title,
-//         subtitle,
-//         lessonsCount
-//     } ;
+    const course = { 
+        title,
+        subtitle,
+        lessonsCount
+    } ;
 
-//     callback(course);
+    callback(course);
 
-//     return course;
-// }
+    return course;
+}

@@ -4,6 +4,7 @@
         "rootDir": "src",
         "outDir": "dist",
         "module": "CommonJS",
+        "allowJs": true,
         "lib": [
             "ES5",
             "DOM"
