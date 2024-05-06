@@ -15,7 +15,7 @@ function freezeLesson(lesson: Lesson): Readonly<Lesson> {
 
 }
 
-function freeze<T>(input: T): Readonly<T>{
+function freeze<T extends object>(input: T): Readonly<T>{
     return Object.freeze(input)
 
 }
@@ -26,7 +26,10 @@ const course: Course = {
 };
 
 
-const frozen = freeze(course);
+const frozenCourse = freeze(course);
+
+// generic type extends object, so just object can used in freeze function
+//const frozenNumber = freeze(10);
 
 interface Lesson {
     title: string;
@@ -35,5 +38,5 @@ interface Lesson {
 
 const frozenLesson = freeze<Lesson>({title:"Teste", seqNo: 100});
 
-frozen.title ="";
-frozenLesson.title = "";
+// frozen.title ="";
+// frozenLesson.title = "";

@@ -25,4 +25,4 @@ const frozen = freezeCourse({
 })
 
 
-frozen.title = "";
+// frozen.title = "";
