@@ -24,14 +24,18 @@ function setupExpress() {
 
 
 function startServer() {
-
-    console.log(process.argv);
-
-    const portArg = process.argv[2];
-
+    
     let port;
+    const portEnv = process.env.PORT,
+     portArg = process.argv[2];
 
-    if (isInteger(portArg)){
+    console.log(process.argv);     
+    
+    if (isInteger(portEnv)) {
+        port = parseInt(portEnv);
+    }
+
+    if (!port && isInteger(portArg)){
         port = parseInt(portArg);
     }
 
