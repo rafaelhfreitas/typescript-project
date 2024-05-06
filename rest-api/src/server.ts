@@ -1,5 +1,15 @@
-import * as express from 'express';
+import * as dotenv from "dotenv";
 
+const result = dotenv.config();
+
+if (result.error){
+    console.log(`Error loading environment variables, aborting...`);
+    process.exit(1);
+}
+
+console.log(process.env.PORT)
+
+import * as express from 'express';
 import { root } from "./routes/root";
 import { isInteger } from './utils';
 
@@ -8,11 +18,9 @@ const app = express();
 
 function setupExpress() {
 
-    
     app.route("/").get(root);
 
 }
-
 
 
 function startServer() {
