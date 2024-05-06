@@ -14,6 +14,7 @@
 
 //This type of decorator is invoke without parentheses 
 //invoke by @SealClass instead of @SealClass()
+//only can use this definition when decorator has no args
 export function SealClass(constructor: Function) {
 
     Object.seal(constructor);
