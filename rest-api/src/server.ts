@@ -17,7 +17,7 @@ function setupExpress() {
 function startServer() {
     app.listen(9000, () => {
         console.log(`HTTP REST API Server is now running at http://localhost:9000`);
-    })
+    }) 
 }
 
 
