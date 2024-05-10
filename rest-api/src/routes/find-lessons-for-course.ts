@@ -9,10 +9,7 @@ export async function findLessonsForCourse(request: Request, response: Response,
     try {
 
         logger.debug(`Called findLessonsForCourse()`); 
-
-
         logger.debug(`request params`, request.params);
-
 
         const courseId = request.params.courseId,
                 query = request.query as any,

@@ -12,7 +12,6 @@ export class Course {
     @Column()
     seqNo: Number;
 
-
     @Column()
     url: string;
     
