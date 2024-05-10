@@ -10,7 +10,7 @@
     "dev": "npm-run-all clean build start-dev-server",
     "populate-db": "npm-run-all clean build run-populate-db-script",
     "run-populate-db-script": "node dist/models/populate-db.js",
-    "delete-db":"npm-run-all clean build run-delete-db-script",
+    "delete-db": "npm-run-all clean build run-delete-db-script",
     "run-delete-db-script": "node dist/models/delete-db.js"
   },
   "author": "",
@@ -23,6 +23,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "pg": "^8.11.5",
