@@ -37,9 +37,9 @@ async function populateDb(){
         }
     }
 
-    const totalCourses = courseRepository.createQueryBuilder().getCount();
+    const totalCourses = await courseRepository.createQueryBuilder().getCount();
 
-    const totalLessons = lessonRepository.createQueryBuilder().getCount();
+    const totalLessons = await lessonRepository.createQueryBuilder().getCount();
 
     console.log(` Data inserted - courses ${totalCourses}, lessons ${totalLessons}`);
 

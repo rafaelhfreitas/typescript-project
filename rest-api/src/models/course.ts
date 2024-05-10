@@ -22,7 +22,7 @@ export class Course {
     @Column()
     longDescription: string;
     
-    @Column()
+    @Column({nullable: true})
     courseCategory: string;
 
     @OneToMany(() => Lesson, lesson => lesson.course )
