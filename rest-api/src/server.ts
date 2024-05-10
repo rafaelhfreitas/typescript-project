@@ -7,12 +7,13 @@ if (result.error){
     process.exit(1);
 }
 
-console.log(process.env.PORT)
 
+import "reflect-metadata";
 import * as express from 'express';
 import { root } from "./routes/root";
 import { isInteger } from './utils';
 import { logger } from "./logger";
+import { AppDataSource } from "./datasource";
 
 
 const app = express();
@@ -50,5 +51,16 @@ function startServer() {
 }
 
 
-setupExpress();
-startServer();
+
+
+AppDataSource.initialize()
+    .then(() => {
+        logger.info(`The datasource has been initialized successfully.`)
+        setupExpress();
+        startServer();    
+    })
+    .catch((err) => {
+        logger.error(`Error during datasource initializtion, `, err);
+        process.exit(1);
+
+    })
