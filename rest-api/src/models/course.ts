@@ -11,6 +11,10 @@ export class Course {
     
     @Column()
     seqNo: Number;
+
+
+    @Column()
+    url: string;
     
     @Column()
     title: string;
@@ -18,12 +22,11 @@ export class Course {
     @Column()
     iconUrl: string;
     
-
     @Column()
     longDescription: string;
     
     @Column({nullable: true})
-    courseCategory: string;
+    category: string;
 
     @OneToMany(() => Lesson, lesson => lesson.course )
     lessons: Lesson[];
