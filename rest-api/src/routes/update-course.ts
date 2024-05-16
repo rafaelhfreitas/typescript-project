@@ -18,6 +18,12 @@ import { Course } from "../models/course";
  *  
  * curl -X POST  http://localhost:9000/api/users -H "Content-Type:application/json" -d '{"email": "rafael@rafael.com", "pictureUrl":"https://avatars.githubusercontent.com/u/5454709", "password":"123", "isAdmin": false}'
  * 
+ * curl -X GET  http://localhost:9000/api/courses;
+ * 
+ * curl -X POST  http://localhost:9000/api/login -H "Content-Type:application/json" -d '{"email": "test@angular-university.io", "password":"test"}'
+ * curl -X POST  http://localhost:9000/api/login -H "Content-Type:application/json" -d '{"email": "rafael@rafael.com", "password":"123"}'
+ * 
+ * curl -X GET  http://localhost:9000/api/courses -H "Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidGVzdEBhbmd1bGFyLXVuaXZlcnNpdHkuaW8iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzE1ODkxNzMzfQ.dIaaatfphFCchUknXKbHtjmFZ-0OG68-0Jxym7OQ2bc"
  */
 
 export async function updateCourse(request: Request, response: Response, next: NextFunction){
