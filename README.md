@@ -12,96 +12,39 @@ This master branch contains the *final version of the course code*, that you can
 
 IMPORTANT: Please install Node 16 LST (Long Term Support version).
 
-# Other Courses from the Angular University 
+# Summary
+  ## covered all features of typescript language
+  ### classes
+  ### fundamentals
+  ### decoratos
+  ### generics
+  ### rest-api
 
-# Modern Angular With Signals
+# Requests for this api course created
 
-If you are looking for the [Modern Angular With Signals Course](https://angular-university.io/course/angular-signals-course), the repo with the full code can be found here:
+ Use: `cd rest-api` to enter the folder with api
 
-![Modern Angular With Signals Course](https://d3vigmphadbn9b.cloudfront.net/course-images/large-images/angular-signals-course.jpg)
+ Use: `npm install` to install de project
 
-# Angular Forms In Depth
+ Use: `npm run dev` to run dev enviroment
+ 
+ Use:  `curl -X PATCH  http://localhost:9000/api/courses/76 -H "Content-Type:application/json" -d '{"title": "Typescript Bootcamp v2"}'` for update a course;
+ 
+ 
+ Use: `curl -X POST  http://localhost:9000/api/courses -H "Content-Type:application/json" -d '{"url": "rafael-bootcamp",
+   "title": "Rafael Bootcamp v2",
+   "iconUrl": "https://angular-university.s3-us-west-1.amazonaws.com/course-images/typescript-bootcamp-2.jpg",
+   "longDescription": "Learn in depth the Typescript language, build practical real-world projects",
+   "category": "BEGINNER"}' `  for create a course
 
-If you are looking for the [Angular Forms In Depth](https://angular-university.io/course/angular-forms-course) course, the repo with the full code can be found here:
+ Use: `curl -X DELETE http://localhost:9000/api/courses/77 -H "Content-Type:application/json"` for delete a course 
+   
+ Use: `curl -X POST  http://localhost:9000/api/users -H "Content-Type:application/json" -H "Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.      eyJ1c2VySWQiOjIsImVtYWlsIjoiYWRtaW5AYW5ndWxhci11bml2ZXJzaXR5LmlvIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzE1ODkyNjMwfQ.0WPJfNiixXFZIk6k3XkS1kCesHomKm-7XXXxvV72q64" -d '{"email": "autorizado@rafael.com", "pictureUrl":"https://avatars.githubusercontent.com/u/5454709", "password":"123", "isAdmin": false}'` for create a user, the authorization token has need be a user Admin
 
-![Angular Forms In Depth](https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-forms-course-small.jpg)
-
-# Angular Router In Depth
-
-If you are looking for the [Angular Router In Depth](https://angular-university.io/course/angular-router-course) course, the repo with the full code can be found here:
-
-![Angular Router In Depth](https://angular-university.s3-us-west-1.amazonaws.com/course-images/angular-router-course.jpg)
-
-# NgRx (with NgRx Data) - The Complete Guide
-
-If you are looking for the [Ngrx (with NgRx Data) - The Complete Guide](https://angular-university.io/course/ngrx-course), the repo with the full code can be found here:
-
-![Ngrx (with NgRx Data) - The Complete Guide](https://angular-university.s3-us-west-1.amazonaws.com/course-images/ngrx-v2.png)
-
-
-# Angular Core Deep Dive Course
-
-If you are looking for the [Angular Core Deep Dive Course](https://angular-university.io/course/angular-course), the repo with the full code can be found here:
-
-![Angular Core Deep Dive](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png)
-
-# RxJs In Practice
-
-If you are looking for the [RxJs In Practice](https://angular-university.io/course/rxjs-course), the repo with the full code can be found here:
-
-![RxJs In Practice Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png)
-
-# NestJs In Practice (with MongoDB)
-
-If you are looking for the [NestJs In Practice Course](https://angular-university.io/course/nestjs-course), the repo with the full code can be found here:
-
-![NestJs In Practice Course](https://angular-university.s3-us-west-1.amazonaws.com/course-images/nestjs-v2.png)
-
-# Angular Testing Course
-
-If you are looking for the [Angular Testing Course](https://angular-university.io/course/angular-testing-course), the repo with the full code can be found here:
-
-![Angular Testing Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-testing-small.png)
-
-# Serverless Angular with Firebase Course
-
-If you are looking for the [Serverless Angular with Firebase Course](https://angular-university.io/course/firebase-course), the repo with the full code can be found here:
-
-![Serverless Angular with Firebase Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/serverless-angular-small.png)
-
-# Angular Universal Course
-
-If you are looking for the [Angular Universal Course](https://angular-university.io/course/angular-universal-course), the repo with the full code can be found here:
-
-![Angular Universal Course](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-universal-small.png)
-
-# Angular PWA Course
-
-If you are looking for the [Angular PWA Course](https://angular-university.io/course/angular-pwa-course), the repo with the full code can be found here:
-
-![Angular PWA Course - Build the future of the Web Today](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png)
-
-# Angular Security Masterclass
-
-If you are looking for the [Angular Security Masterclass](https://angular-university.io/course/angular-security-course), the repo with the full code can be found here:
-
-[Angular Security Masterclass](https://github.com/angular-university/angular-security-course).
-
-![Angular Security Masterclass](https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png)
-
-# Angular Advanced Library Laboratory Course
-
-If you are looking for the Angular Advanced Course, the repo with the full code can be found here:
-
-[Angular Advanced Library Laboratory Course: Build Your Own Library](https://angular-university.io/course/angular-advanced-course).
-
-![Angular Advanced Library Laboratory Course: Build Your Own Library](https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png)
+ Use: `curl -X POST  http://localhost:9000/api/login -H "Content-Type:application/json" -d '{"email": "test@angular-university.io", "password":"test"}'` to login with normal user
 
 
-## RxJs and Reactive Patterns Angular Architecture Course
+ Use: `curl -X POST  http://localhost:9000/api/login -H "Content-Type:application/json" -d '{"email": "admin@angular-university.io", "password":"admin"}'` to login with admin user
 
-If you are looking for the RxJs and Reactive Patterns Angular Architecture Course code, the repo with the full code can be found here:
-
-[RxJs and Reactive Patterns Angular Architecture Course](https://angular-university.io/course/reactive-angular-architecture-course)
-
-![RxJs and Reactive Patterns Angular Architecture Course](https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png)
+ Use: `curl -X GET  http://localhost:9000/api/courses -H "Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoidGVzdEBhbmd1bGFyLXVuaXZlcnNpdHkuaW8iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzE1ODkxNzMzfQ.dIaaatfphFCchUknXKbHtjmFZ-0OG68-0Jxym7OQ2bc"` to get all courses
+ 

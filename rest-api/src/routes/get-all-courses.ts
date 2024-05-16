@@ -8,13 +8,14 @@ export async function getAllCourses(request: Request, response: Response, next: 
 
     try {
 
-        logger.debug(`Called getAllCousers()`);
+        logger.debug(`Called getAllCousers()`, request["user"]);
 
         const courses = await AppDataSource
                 .getRepository(Course)
                 .createQueryBuilder("courses")
                 .leftJoinAndSelect("courses.lessons", "LESSONS")
-                .orderBy("courses.seqNo").getMany();
+                .orderBy("courses.seqNo")
+                .getMany();
         
     
         response.status(200).json({courses});        
